@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0"
+            stylesheets="@../../css/login.css"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.project.financeflow.controller.LoginController">
+
+    <children>
+
+        <StackPane AnchorPane.bottomAnchor="0.0"
+                   AnchorPane.leftAnchor="0.0"
+                   AnchorPane.rightAnchor="0.0"
+                   AnchorPane.topAnchor="0.0">
+
+            <children>
+
+                <HBox maxHeight="560"
+                      maxWidth="950"
+                      minHeight="560"
+                      minWidth="950"
+                      styleClass="card">
+
+                    <!-- Painel Verde -->
+
+                    <VBox alignment="CENTER"
+                          prefWidth="290"
+                          spacing="25"
+                          styleClass="left-panel">
+
+                        <children>
+
+                            <Text styleClass="title-left"
+                                  text="Olá, amigo!" />
+
+                            <Text styleClass="subtitle-left"
+                                  text="Ainda não possui conta?" />
+
+                            <Button fx:id="btnCadastrar"
+                                    onAction="#onCadastrar"
+                                    styleClass="btn-white"
+                                    text="CADASTRAR" />
+
+                        </children>
+
+                    </VBox>
+
+                    <!-- Painel Login -->
+
+                    <VBox alignment="CENTER"
+                          spacing="18"
+                          HBox.hgrow="ALWAYS">
+
+                        <padding>
+                            <Insets top="45"
+                                    right="60"
+                                    bottom="45"
+                                    left="60"/>
+                        </padding>
+
+                        <children>
+
+                            <Text styleClass="title-right"
+                                  text="ENTRAR" />
+
+                            <Region prefHeight="20"/>
+
+                            <!-- Email -->
+
+                            <HBox styleClass="input-box">
+
+                                <children>
+
+                                    <FontIcon iconLiteral="fas-envelope"
+                                              styleClass="icon"/>
+
+                                    <TextField fx:id="txtEmail"
+                                               promptText="E-MAIL"
+                                               styleClass="text-field-custom"/>
+
+                                </children>
+
+                            </HBox>
+
+                            <!-- Senha -->
+
+                            <HBox styleClass="input-box">
+
+                                <children>
+
+                                    <FontIcon iconLiteral="fas-lock"
+                                              styleClass="icon"/>
+
+                                    <PasswordField fx:id="txtSenha"
+                                                   promptText="SENHA"
+                                                   styleClass="text-field-custom"/>
+
+                                </children>
+
+                            </HBox>
+
+                            <Hyperlink text="Esqueceu sua senha?"
+                                       styleClass="link-forgot"/>
+
+                            <Region prefHeight="10"/>
+
+                            <Button fx:id="btnEntrar"
+                                    onAction="#onEntrar"
+                                    styleClass="btn-green"
+                                    text="ENTRAR"/>
+
+                        </children>
+
+                    </VBox>
+
+                </HBox>
+
+            </children>
+
+        </StackPane>
+
+    </children>
+
+</AnchorPane>

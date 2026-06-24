@@ -95,6 +95,18 @@
     -fx-border-color:transparent;
 }
 
+/* ESTILO DO LINK */
+
+.link-forgot{
+    -fx-text-fill:#777;
+    -fx-font-size:14;
+    -fx-border-color:transparent;
+}
+
+.link-forgot:hover{
+    -fx-text-fill:#41D65E;
+}
+
 /* BOTÃO ENTRAR */
 
 .btn-white{
