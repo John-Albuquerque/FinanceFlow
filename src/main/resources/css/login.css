@@ -1,0 +1,196 @@
+.root{
+    -fx-background-color:#ECECEC;
+    -fx-font-family:"Poppins";
+}
+
+/* CARD */
+
+.card{
+    -fx-background-color:white;
+    -fx-background-radius:18;
+    -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.25),20,0,0,6);
+}
+
+
+
+/* PAINEL VERDE */
+
+.left-panel{
+    -fx-background-color:#41D65E;
+    -fx-background-radius:18 0 0 18;
+}
+
+/* TÍTULOS */
+
+.title-left{
+    -fx-fill:white;
+    -fx-font-size:36px;
+    -fx-font-weight:700;
+}
+
+.subtitle-left{
+    -fx-fill:white;
+    -fx-font-size:18px;
+}
+
+.title-right{
+    -fx-fill:#41D65E;
+    -fx-font-size:34px;
+    -fx-font-weight:bold;
+}
+
+/* INPUT */
+
+.input-box{
+
+    -fx-background-color:#F4F4F4;
+
+    -fx-background-radius:6;
+
+    -fx-alignment:CENTER_LEFT;
+
+    -fx-padding:0 20 0 20;
+
+    -fx-pref-width:550;
+
+    -fx-pref-height:60;
+
+    -fx-spacing:15;
+}
+
+/* ÍCONE */
+
+.icon{
+
+    -fx-font-size:24;
+
+    -fx-fill:#A5A5A5;
+}
+
+/* TEXTFIELD */
+
+.text-field-custom{
+
+    -fx-background-color:transparent;
+
+    -fx-border-color:transparent;
+
+    -fx-font-size:16;
+
+    -fx-pref-width:430;
+
+    -fx-text-fill:#555;
+
+    -fx-prompt-text-fill:#A5A5A5;
+
+    -fx-focus-color:transparent;
+
+    -fx-faint-focus-color:transparent;
+}
+
+.text-field-custom:focused{
+
+    -fx-background-color:transparent;
+
+    -fx-border-color:transparent;
+}
+
+/* BOTÃO ENTRAR */
+
+.btn-white{
+
+    -fx-background-color:transparent;
+
+    -fx-border-color:white;
+
+    -fx-border-width:3;
+
+    -fx-border-radius:14;
+
+    -fx-background-radius:14;
+
+    -fx-text-fill:white;
+
+    -fx-font-size:18;
+
+    -fx-font-weight:bold;
+
+    -fx-pref-width:190;
+
+    -fx-pref-height:55;
+
+    -fx-cursor:hand;
+}
+
+.btn-white:hover{
+
+    -fx-background-color:white;
+
+    -fx-text-fill:#41D65E;
+}
+
+.btn-white:pressed{
+
+    -fx-scale-x:0.97;
+
+    -fx-scale-y:0.97;
+}
+
+/* BOTÃO CADASTRAR */
+
+.btn-green{
+
+    -fx-background-color:#41D65E;
+
+    -fx-background-radius:30;
+
+    -fx-text-fill:white;
+
+    -fx-font-size:18;
+
+    -fx-font-weight:bold;
+
+    -fx-pref-width:340;
+
+    -fx-pref-height:55;
+
+    -fx-cursor:hand;
+}
+
+.btn-green:hover{
+
+    -fx-background-color:#38C855;
+}
+
+.btn-green:pressed{
+
+    -fx-scale-x:0.98;
+
+    -fx-scale-y:0.98;
+}
+
+/* PASSWORD */
+
+.password-field{
+
+    -fx-background-color:transparent;
+
+    -fx-border-color:transparent;
+
+    -fx-font-size:16;
+
+    -fx-text-fill:#555;
+
+    -fx-prompt-text-fill:#A5A5A5;
+
+    -fx-focus-color:transparent;
+
+    -fx-faint-focus-color:transparent;
+}
+
+.password-field:focused{
+
+    -fx-background-color:transparent;
+
+    -fx-border-color:transparent;
+}
