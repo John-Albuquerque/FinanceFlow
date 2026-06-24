@@ -1,4 +1,4 @@
-package com.project.FinanceFlow;
+package com.project.financeflow;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,5 +9,4 @@ public class FinanceFlowApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FinanceFlowApplication.class, args);
 	}
-
 }

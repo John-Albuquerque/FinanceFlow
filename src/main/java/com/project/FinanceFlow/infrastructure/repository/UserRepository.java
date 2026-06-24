@@ -1,7 +1,7 @@
-package com.project.FinanceFlow.infrastructure.repository;
+package com.project.financeflow.infrastructure.repository;
 
 
-import com.project.FinanceFlow.infrastructure.entitys.User;
+import com.project.financeflow.infrastructure.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

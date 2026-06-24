@@ -1,7 +1,7 @@
-package com.project.FinanceFlow.console;
+package com.project.financeflow.console;
 
-import com.project.FinanceFlow.business.UserService;
-import com.project.FinanceFlow.infrastructure.entitys.User;
+import com.project.financeflow.business.UserService;
+import com.project.financeflow.infrastructure.entities.User;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

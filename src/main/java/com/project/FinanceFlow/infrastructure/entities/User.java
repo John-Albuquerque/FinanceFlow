@@ -1,4 +1,4 @@
-package com.project.FinanceFlow.infrastructure.entitys;
+package com.project.financeflow.infrastructure.entities;
 
 import jakarta.persistence.*;
 import lombok.*;

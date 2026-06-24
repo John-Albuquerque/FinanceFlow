@@ -6,7 +6,7 @@ import javafx.scene.control.TextField;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class AuthController {
+public class RegisterController {
 
     @FXML
     private TextField txtNome;

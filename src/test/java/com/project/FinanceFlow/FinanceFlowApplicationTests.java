@@ -1,4 +1,4 @@
-package com.project.FinanceFlow;
+package com.project.financeflow;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

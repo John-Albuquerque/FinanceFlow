@@ -1,7 +1,7 @@
-package com.project.FinanceFlow.business;
+package com.project.financeflow.business;
 
-import com.project.FinanceFlow.infrastructure.entitys.User;
-import com.project.FinanceFlow.infrastructure.repository.UserRepository;
+import com.project.financeflow.infrastructure.entities.User;
+import com.project.financeflow.infrastructure.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
@@ -35,6 +35,6 @@ public class UserService {
                 .password(user.getPassword() != null ? user.getPassword() : userEntity.getPassword())
                 .id(userEntity.getId())
                 .build();
-        userRepository.saveAndFlush(userUpdated);
+        userRepository.save(userUpdated);
     }
 }
