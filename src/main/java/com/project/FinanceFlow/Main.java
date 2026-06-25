@@ -1,5 +1,7 @@
 package com.project.financeflow;
 
+import com.project.financeflow.ui.javafx.FxmlView;
+import com.project.financeflow.ui.javafx.StageManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -21,16 +23,10 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/view/auth/register.fxml"));
+        StageManager stageManager = context.getBean(StageManager.class);
 
-        loader.setControllerFactory(context::getBean);
-
-        Scene scene = new Scene(loader.load());
-        stage.setTitle("FinanceFlow");
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.show();
+        stageManager.setPrimaryStage(stage);
+        stageManager.changeScreen(FxmlView.Login);
     }
 
 

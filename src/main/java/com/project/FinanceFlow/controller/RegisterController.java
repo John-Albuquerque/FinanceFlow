@@ -1,12 +1,18 @@
 package com.project.financeflow.controller;
 
+import com.project.financeflow.ui.javafx.FxmlView;
+import com.project.financeflow.ui.javafx.StageManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class RegisterController {
+
+    @Autowired
+    StageManager stageManager;
 
     @FXML
     private TextField txtNome;
@@ -44,7 +50,7 @@ public class RegisterController {
     private void onEntrar() {
 
         System.out.println("Tela de Login");
-
+        stageManager.changeScreen(FxmlView.Login);
     }
 
     private void limparCampos() {
