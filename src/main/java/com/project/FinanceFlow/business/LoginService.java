@@ -6,20 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RegisterServices {
+public class LoginService {
 
     @Autowired
     private UserRepository repository;
 
+    public void entrar(User user){
 
-    public void registerUser(String name, String email, String senha){
-        User user = User.builder()
-                .name(name)
-                .email(email)
-                .password(senha)
-                .build();
-
-        System.out.println(user);
-        repository.save(user);
     }
+
 }

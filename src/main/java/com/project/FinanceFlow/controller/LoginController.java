@@ -1,5 +1,6 @@
 package com.project.financeflow.controller;
 
+import com.project.financeflow.business.LoginService;
 import com.project.financeflow.ui.javafx.FxmlView;
 import com.project.financeflow.ui.javafx.StageManager;
 import javafx.fxml.FXML;
@@ -14,12 +15,15 @@ public class LoginController {
     @Autowired
     StageManager stageManager;
 
+    @Autowired
+    private LoginService loginService;
+
     @FXML
     private TextField txtEmail;
 
     @FXML
     private PasswordField txtSenha;
-
+    
     @FXML
     public void initialize() {
 
@@ -29,7 +33,6 @@ public class LoginController {
 
     @FXML
     private void onCadastrar() {
-        System.out.println("Tela de Cadastro");
         stageManager.changeScreen(FxmlView.Register);
     }
 

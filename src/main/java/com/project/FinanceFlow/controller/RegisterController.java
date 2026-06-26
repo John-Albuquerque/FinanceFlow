@@ -1,5 +1,6 @@
 package com.project.financeflow.controller;
 
+import com.project.financeflow.business.RegisterServices;
 import com.project.financeflow.ui.javafx.FxmlView;
 import com.project.financeflow.ui.javafx.StageManager;
 import javafx.fxml.FXML;
@@ -12,7 +13,11 @@ import org.springframework.stereotype.Controller;
 public class RegisterController {
 
     @Autowired
-    StageManager stageManager;
+    private StageManager stageManager;
+    @Autowired
+    private RegisterServices registerServices;
+
+
 
     @FXML
     private TextField txtNome;
@@ -37,10 +42,7 @@ public class RegisterController {
         String email = txtEmail.getText();
         String senha = txtSenha.getText();
 
-        System.out.println("========= NOVO CADASTRO =========");
-        System.out.println("Nome: " + nome);
-        System.out.println("Email: " + email);
-        System.out.println("Senha: " + senha);
+        registerServices.registerUser(nome, email, senha);
 
         limparCampos();
 
