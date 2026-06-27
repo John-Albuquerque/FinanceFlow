@@ -2,14 +2,14 @@ package com.project.financeflow.business;
 
 import com.project.financeflow.infrastructure.entities.User;
 import com.project.financeflow.infrastructure.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@AllArgsConstructor
 public class RegisterServices {
 
-    @Autowired
-    private UserRepository repository;
+    private final UserRepository repository;
 
 
     public void registerUser(String name, String email, String senha){
@@ -19,7 +19,7 @@ public class RegisterServices {
                 .password(senha)
                 .build();
 
-        System.out.println(user);
         repository.save(user);
+        System.out.println(user);
     }
 }

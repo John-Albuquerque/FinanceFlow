@@ -3,15 +3,13 @@ package com.project.financeflow.business;
 import com.project.financeflow.infrastructure.entities.User;
 import com.project.financeflow.infrastructure.repository.UserRepository;
 import jakarta.transaction.Transactional;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@AllArgsConstructor
 public class UserService {
     private final UserRepository userRepository;
-
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
 
     public void userRegister(User user){
         userRepository.save(user);

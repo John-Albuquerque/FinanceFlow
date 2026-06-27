@@ -93,7 +93,7 @@
 
                                     <FontIcon iconLiteral="fas-lock" styleClass="icon"/>
 
-                                    <PasswordField fx:id="txtSenha" promptText="SENHA" styleClass="text-field-custom" />
+                                    <PasswordField fx:id="txtPassword" promptText="SENHA" styleClass="text-field-custom" />
 
                                 </children>
 
