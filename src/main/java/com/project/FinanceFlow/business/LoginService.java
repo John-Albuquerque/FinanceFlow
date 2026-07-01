@@ -1,13 +1,14 @@
 package com.project.financeflow.business;
 
 import com.project.financeflow.infrastructure.entities.User;
-import com.project.financeflow.infrastructure.repository.UserRepository;
+import com.project.financeflow.infrastructure.repositories.UserRepository;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class LoginService {
 
     private final UserRepository repository;

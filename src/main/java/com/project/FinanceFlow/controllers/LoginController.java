@@ -1,4 +1,4 @@
-package com.project.financeflow.controller;
+package com.project.financeflow.controllers;
 
 import com.project.financeflow.business.LoginService;
 import com.project.financeflow.ui.javafx.FxmlView;
@@ -6,11 +6,11 @@ import com.project.financeflow.ui.javafx.StageManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 
 @Controller
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class LoginController {
     private final StageManager stageManager;
     private final LoginService loginService;

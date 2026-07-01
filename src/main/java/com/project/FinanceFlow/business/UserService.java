@@ -1,20 +1,19 @@
 package com.project.financeflow.business;
 
 import com.project.financeflow.infrastructure.entities.User;
-import com.project.financeflow.infrastructure.repository.UserRepository;
+import com.project.financeflow.infrastructure.repositories.UserRepository;
 import jakarta.transaction.Transactional;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class UserService {
     private final UserRepository userRepository;
 
-    public void userRegister(User user){
+    public void userRegister(User user) {
         userRepository.save(user);
     }
-
     public User findByEmail(String email){
         return userRepository.findByEmail(email).orElseThrow(
                 () -> new RuntimeException("Email não encontrado")
@@ -35,4 +34,5 @@ public class UserService {
                 .build();
         userRepository.save(userUpdated);
     }
+
 }

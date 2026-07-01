@@ -1,25 +1,37 @@
 package com.project.financeflow.business;
 
+import com.project.financeflow.dtos.requests.UserCreationRequest;
+import com.project.financeflow.dtos.responses.UserCreatedResponse;
 import com.project.financeflow.infrastructure.entities.User;
-import com.project.financeflow.infrastructure.repository.UserRepository;
-import lombok.AllArgsConstructor;
+import com.project.financeflow.infrastructure.repositories.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class RegisterServices {
+    private static final String MENSAGEM_SUCESSO_CRIACAO_USUARIO = "Usuário criado com sucesso!";
+    private final UserRepository userRepository;
 
-    private final UserRepository repository;
 
-
-    public void registerUser(String name, String email, String senha){
+    public UserCreatedResponse registerUser(UserCreationRequest request){
+        if(userRepository.existsByEmail(request.getEmail())){
+            throw new RuntimeException("Email já cadastrado");
+        }
         User user = User.builder()
-                .name(name)
-                .email(email)
-                .password(senha)
+                .name(request.getName())
+                .email(request.getEmail())
+                .password(request.getPassword())
                 .build();
 
-        repository.save(user);
-        System.out.println(user);
+        userRepository.save(user);
+
+        return UserCreatedResponse
+                .builder()
+                .id(user.getId())
+                .name(user.getName())
+                .mensage(MENSAGEM_SUCESSO_CRIACAO_USUARIO)
+                .build();
+
     }
 }

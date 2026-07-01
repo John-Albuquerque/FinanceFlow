@@ -10,7 +10,7 @@
             stylesheets="@../../css/login.css"
             xmlns="http://javafx.com/javafx/17.0.12"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.project.financeflow.controller.LoginController">
+            fx:controller="com.project.financeflow.controllers.LoginController">
 
     <children>
 

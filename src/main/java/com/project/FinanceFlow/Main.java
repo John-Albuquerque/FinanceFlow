@@ -3,8 +3,6 @@ package com.project.financeflow;
 import com.project.financeflow.ui.javafx.FxmlView;
 import com.project.financeflow.ui.javafx.StageManager;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;

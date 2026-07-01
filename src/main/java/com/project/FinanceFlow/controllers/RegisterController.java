@@ -1,17 +1,17 @@
-package com.project.financeflow.controller;
+package com.project.financeflow.controllers;
 
 import com.project.financeflow.business.RegisterServices;
+import com.project.financeflow.dtos.requests.UserCreationRequest;
 import com.project.financeflow.ui.javafx.FxmlView;
 import com.project.financeflow.ui.javafx.StageManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 
 @Controller
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class RegisterController {
 
     private final StageManager stageManager;
@@ -36,12 +36,13 @@ public class RegisterController {
 
     @FXML
     private void onCadastrar() {
+        UserCreationRequest userCreationRequest = new UserCreationRequest();
 
-        String nome = txtNome.getText();
-        String email = txtEmail.getText();
-        String senha = txtPassword.getText();
+        userCreationRequest.setName(txtNome.getText());
+        userCreationRequest.setName(txtEmail.getText());
+        userCreationRequest.setName(txtPassword.getText());
 
-        registerServices.registerUser(nome, email, senha);
+        registerServices.registerUser(userCreationRequest);
 
         limparCampos();
 

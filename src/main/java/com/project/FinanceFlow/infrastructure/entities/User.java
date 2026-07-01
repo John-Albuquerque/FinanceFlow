@@ -4,26 +4,22 @@ import jakarta.persistence.*;
 import lombok.*;
 
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
-@ToString(exclude = "senha")
+@ToString(exclude = "password")
 @Builder
 
 @Table(name = "user_tab")
 @Entity
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "email", unique = true)
     private String email;
-    @Column(name = "name")
     private String name;
-    @Column(name = "password")
     private String password;
 
 
